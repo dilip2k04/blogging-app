@@ -59,7 +59,7 @@ const App = () => {
 
   const createPost = async () => {
     const url = await uploadImage();
-    await axios.post('http://localhost:5000/posts', {
+    await axios.post('https://blogging-app-backend-2m24.onrender.com/posts', {
       userId: user.uid,
       title,
       description: desc,
@@ -69,7 +69,7 @@ const App = () => {
   };
 
   const fetchPosts = async () => {
-    const res = await axios.get('http://localhost:5000/posts');
+    const res = await axios.get('https://blogging-app-backend-2m24.onrender.com/posts');
     setPosts(res.data);
   };
 
