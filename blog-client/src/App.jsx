@@ -98,8 +98,16 @@ const App = () => {
       const userPosts = posts.filter((post) => post.userId === user?.uid);
       return (
         <>
-          <h2>My Posts</h2>
-          <PostList posts={userPosts} />
+          <div className="post-header">
+            <h2>My Posts</h2>
+          </div>
+          {userPosts.length > 0 ? (
+            <PostList posts={userPosts} />
+          ) : (
+            <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+              No posts available
+            </div>
+          )}
         </>
       );
     } else if (activePage === 'create') {
