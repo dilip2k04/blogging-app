@@ -12,7 +12,7 @@ export const PostList = () => {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/posts');
+      const res = await axios.get('https://blogging-app-backend-2m24.onrender.com/posts');
       setPosts(res.data);
     } catch (err) {
       console.error('Failed to fetch posts:', err);
@@ -25,7 +25,7 @@ export const PostList = () => {
 
   const handleLike = async (postId) => {
     try {
-      await axios.post(`http://localhost:5000/posts/${postId}/like`, { userId: currentUserId });
+      await axios.post(`https://blogging-app-backend-2m24.onrender.com/posts/${postId}/like`, { userId: currentUserId });
       setPosts(prevPosts =>
         prevPosts.map(post =>
           post._id === postId
