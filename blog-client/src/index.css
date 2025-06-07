@@ -1,0 +1,5 @@
+body { font-family: sans-serif; padding: 20px; }
+input, textarea { display: block; margin: 10px 0; padding: 8px; width: 300px; }
+button { margin: 5px 0; padding: 8px 16px; }
+img { margin-top: 10px; }
+.auth, .dashboard { margin-bottom: 30px; }
