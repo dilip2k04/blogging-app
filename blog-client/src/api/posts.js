@@ -1,7 +1,7 @@
 // api/posts.js
 import axios from 'axios';
 
-const API_URL = 'https://blogging-app-backend-2m24.onrender.com/posts';
+const API_URL = 'http://localhost:5000/posts';
 
 export const fetchPosts = async () => {
   try {
